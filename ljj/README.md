@@ -44,11 +44,11 @@ chore(progress): 更新[模块名称]进度 [题目编号][题目名称] -> [进
 
 | 题目名称                                                     | 相关标签                                 | 平台      | 难度 | 进度 |
 | ------------------------------------------------------------ | ---------------------------------------- | --------- | ---- | ---- |
-| [704. 二分查找](https://leetcode.cn/problems/binary-search/) | `数组`，`二分查找`                       | leetcode  | 简单 | ❌    |
-| [27. 移除元素](https://leetcode.cn/problems/remove-element/) | `数组`，`双指针`                         | leetcode  | 简单 | ❌    |
-| [977. 有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array/) | `数组`，`双指针`，`排序`                 | leetcode  | 简单 | ❌    |
-| [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/) | `数组`，`二分查找`，`前缀和`，`滑动窗口` | leetcode  | 中等 | ❌    |
-| [59. 螺旋矩阵 II](https://leetcode.cn/problems/spiral-matrix-ii/) | `数组`，`矩阵`，`模拟`                   | leetcode  | 中等 | ❌    |
+| [704. 二分查找](https://leetcode.cn/problems/binary-search/) | `数组`，`二分查找`                       | leetcode  | 简单 | `✅`  |
+| [27. 移除元素](https://leetcode.cn/problems/remove-element/) | `数组`，`双指针`                         | leetcode  | 简单 | `✅`  |
+| [977. 有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array/) | `数组`，`双指针`，`排序`                 | leetcode  | 简单 | `✅`  |
+| [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/) | `数组`，`二分查找`，`前缀和`，`滑动窗口` | leetcode  | 中等 | `✅`  |
+| [59. 螺旋矩阵 II](https://leetcode.cn/problems/spiral-matrix-ii/) | `数组`，`矩阵`，`模拟`                   | leetcode  | 中等 | `✅`  |
 | [58. 区间和（第九期模拟笔试）](https://kamacoder.com/problempage.php?pid=1070) | `数组`                                   | kamacoder |      | ❌    |
 | [44. 开发商购买土地](https://kamacoder.com/problempage.php?pid=1044) | `数组`                                   | kamacoder |      | ❌    |
 
