@@ -38,15 +38,15 @@ public class P203_RemoveLinkedListElements {
 
     class Solution2 {
         public ListNode removeElements(ListNode head, int val) {
-            ListNode dummy = new ListNode();
-            dummy.next = head;
-            ListNode current = dummy;
+            ListNode dummyHead = new ListNode();
+            dummyHead.next = head;
+            ListNode current = dummyHead;
             while (current.next != null)
                 if (current.next.val == val)
                     current.next = current.next.next;
                 else
                     current = current.next;
-            return dummy.next;
+            return dummyHead.next;
         }
     }
 
