@@ -10,7 +10,7 @@ public class P203_RemoveLinkedListElements {
 
     public static void main(String[] args) {
         Solution solution = new P203_RemoveLinkedListElements().new Solution();
-        Solution solution2 = new P203_RemoveLinkedListElements().new Solution();
+        Solution2 solution2 = new P203_RemoveLinkedListElements().new Solution2();
 
         ListUtils.printList(solution.removeElements(ListUtils.arrayToList(new int[]{1, 2, 6, 3, 4, 5, 6}), 6));
         ListUtils.printList(solution.removeElements(ListUtils.arrayToList(new int[]{}), 1));
@@ -38,8 +38,7 @@ public class P203_RemoveLinkedListElements {
 
     class Solution2 {
         public ListNode removeElements(ListNode head, int val) {
-            ListNode dummyHead = new ListNode();
-            dummyHead.next = head;
+            ListNode dummyHead = new ListNode(-1, head);
             ListNode current = dummyHead;
             while (current.next != null)
                 if (current.next.val == val)
