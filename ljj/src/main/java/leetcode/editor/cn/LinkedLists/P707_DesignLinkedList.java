@@ -1,7 +1,5 @@
 package leetcode.editor.cn.LinkedLists;
 
-;
-
 /**
  * 设计链表
  *
