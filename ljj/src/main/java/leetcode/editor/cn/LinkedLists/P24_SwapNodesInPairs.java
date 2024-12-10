@@ -1,7 +1,5 @@
 package leetcode.editor.cn.LinkedLists;
 
-;
-
 /**
  * 两两交换链表中的节点
  *

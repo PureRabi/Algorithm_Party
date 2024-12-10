@@ -1,7 +1,5 @@
 package leetcode.editor.cn.LinkedLists;
 
-;
-
 /**
  * 反转链表
  *
