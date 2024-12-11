@@ -19,7 +19,6 @@ public class P203_RemoveLinkedListElements {
         ListUtils.printList(solution2.removeElements(ListUtils.arrayToList(new int[]{1, 2, 6, 3, 4, 5, 6}), 6));
         ListUtils.printList(solution2.removeElements(ListUtils.arrayToList(new int[]{}), 1));
         ListUtils.printList(solution2.removeElements(ListUtils.arrayToList(new int[]{7, 7, 7, 7}), 7));
-
     }
 
     class Solution {
