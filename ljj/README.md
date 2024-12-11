@@ -68,16 +68,26 @@ chore(progress): 更新[模块名称]进度 [题目编号][题目名称] -> [进
 
 | 题目名称                                                     | 相关标签                                       | 平台     | 难度 | 进度 |
 | ------------------------------------------------------------ | ---------------------------------------------- | -------- | ---- | ---- |
-| [242. 有效的字母异位词](https://leetcode.cn/problems/valid-anagram/description/) | `哈希表`，`字符串`，`排序`                     | leetcode | 简单 | ❌    |
-| [349. 两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/description/) | `数组`，`哈希表`，`双指针`，`二分查找`，`排序` | leetcode | 简单 | ❌    |
-| [202. 快乐数](https://leetcode.cn/problems/happy-number/description/) | `哈希表`，`数学`，`双指针`                     | leetcode | 简单 | ❌    |
-| [1. 两数之和](https://leetcode.cn/problems/two-sum/description/) | `数组`，`哈希表`                               | leetcode | 简单 | ❌    |
-| [454. 四数相加 I](https://leetcode.cn/problems/4sum-ii/description/) | `数组`，`哈希表`                               | leetcode | 中等 | ❌    |
-| [383. 赎金信](https://leetcode.cn/problems/ransom-note/description/) | `哈希表`，`字符串`，`计数`                     | leetcode | 简单 | ❌    |
-| [15. 三数之和](https://leetcode.cn/problems/3sum/description/) | `数组`，`双指针`，`排序`                       | leetcode | 中等 | ❌    |
-| [18. 四数之和](https://leetcode.cn/problems/4sum/description/) | `数组`，`双指针`，`排序`                       | leetcode | 中等 | ❌    |
+| [242. 有效的字母异位词](https://leetcode.cn/problems/valid-anagram/description/) | `哈希表`，`字符串`，`排序`                     | leetcode | 简单 | ✅    |
+| [349. 两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/description/) | `数组`，`哈希表`，`双指针`，`二分查找`，`排序` | leetcode | 简单 | ✅    |
+| [202. 快乐数](https://leetcode.cn/problems/happy-number/description/) | `哈希表`，`数学`，`双指针`                     | leetcode | 简单 | ✅    |
+| [1. 两数之和](https://leetcode.cn/problems/two-sum/description/) | `数组`，`哈希表`                               | leetcode | 简单 | ✅    |
+| [454. 四数相加 II](https://leetcode.cn/problems/4sum-ii/description/) | `数组`，`哈希表`                               | leetcode | 中等 | ✅    |
+| [383. 赎金信](https://leetcode.cn/problems/ransom-note/description/) | `哈希表`，`字符串`，`计数`                     | leetcode | 简单 | ✅    |
+| [15. 三数之和](https://leetcode.cn/problems/3sum/description/) | `数组`，`双指针`，`排序`                       | leetcode | 中等 | ✅    |
+| [18. 四数之和](https://leetcode.cn/problems/4sum/description/) | `数组`，`双指针`，`排序`                       | leetcode | 中等 | ✅    |
 
 ## 字符串
+
+| 题目名称                                                     | 相关标签                         | 平台      | 难度 | 进度 |
+| ------------------------------------------------------------ | -------------------------------- | --------- | ---- | ---- |
+| [344. 反转字符串](https://leetcode.cn/problems/reverse-string/description/) | `双指针`，`字符串`               | leetcode  | 简单 | ❌    |
+| [541. 反转字符串II](https://leetcode.cn/problems/reverse-string-ii/description/) | `双指针`，`字符串`               | leetcode  | 简单 | ❌    |
+| [54. 替换数字（第八期模拟笔试）](https://kamacoder.com/problempage.php?pid=1064) |                                  | kamacoder |      | ❌    |
+| [151. 反转字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/description/) | `双指针`，`字符串`               | leetcode  | 中等 | ❌    |
+| [55. 右旋字符串(第八期模拟笔试)](https://kamacoder.com/problempage.php?pid=1065) |                                  | kamacoder |      | ❌    |
+| [28. 找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/description/) | `双指针`，`字符串`，`字符串匹配` | leetcode  | 简单 | ❌    |
+| [459. 重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern/description/) | `字符串`，`字符串匹配`           | leetcode  | 简单 | ❌    |
 
 ## 双指针法
 
