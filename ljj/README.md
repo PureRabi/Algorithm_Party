@@ -80,14 +80,33 @@ chore(progress): 更新[模块名称]进度 [题目编号][题目名称] -> [进
 ## 字符串
 
 | 题目名称                                                     | 相关标签                         | 平台      | 难度 | 进度 |
-| ------------------------------------------------------------ | -------------------------------- | --------- | ---- | ---- |
-| [344. 反转字符串](https://leetcode.cn/problems/reverse-string/description/) | `双指针`，`字符串`               | leetcode  | 简单 | ❌    |
-| [541. 反转字符串II](https://leetcode.cn/problems/reverse-string-ii/description/) | `双指针`，`字符串`               | leetcode  | 简单 | ❌    |
-| [54. 替换数字（第八期模拟笔试）](https://kamacoder.com/problempage.php?pid=1064) |                                  | kamacoder |      | ❌    |
-| [151. 反转字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/description/) | `双指针`，`字符串`               | leetcode  | 中等 | ❌    |
-| [55. 右旋字符串(第八期模拟笔试)](https://kamacoder.com/problempage.php?pid=1065) |                                  | kamacoder |      | ❌    |
-| [28. 找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/description/) | `双指针`，`字符串`，`字符串匹配` | leetcode  | 简单 | ❌    |
-| [459. 重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern/description/) | `字符串`，`字符串匹配`           | leetcode  | 简单 | ❌    |
+| ------------------------------------------------------------ | -------------------------------- | --------- | ---- | -- |
+| [344. 反转字符串](https://leetcode.cn/problems/reverse-string/description/) | `双指针`，`字符串`               | leetcode  | 简单 | ✅  |
+| [541. 反转字符串II](https://leetcode.cn/problems/reverse-string-ii/description/) | `双指针`，`字符串`               | leetcode  | 简单 | ✅  |
+| [54. 替换数字（第八期模拟笔试）](https://kamacoder.com/problempage.php?pid=1064) | `字符串`                         | kamacoder |      | ✅  |
+| [151. 反转字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/description/) | `双指针`，`字符串`               | leetcode  | 中等 | ✅  |
+| [55. 右旋字符串(第八期模拟笔试)](https://kamacoder.com/problempage.php?pid=1065) | `字符串`                         | kamacoder |      | ✅  |
+| [28. 找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/description/) | `双指针`，`字符串`，`字符串匹配` | leetcode  | 简单 | ⏳   |
+| [459. 重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern/description/) | `字符串`，`字符串匹配`           | leetcode  | 简单 | ⏳   |
+
+**KMP(Knuth-Morris-Pratt)**：一种用于字符串匹配的高效算法，能够在 $O(m+n)$ 的时间复杂度内完成主串和模式串的匹配，其中 $n$ 是主串长度，$m$ 是模式串长度。核心思想是**利用已经匹配的部分信息，避免重复匹配主串中的字符，减少比较次数。**
+
+前缀表：$aabaaf$
+
+| 子串     | 后缀                           | 后缀                          | 值   |
+| -------- | ------------------------------ | ----------------------------- | ---- |
+| $a$      | -                              | -                             | 0    |
+| $aa$     | $a$                            | $a$                           | 1    |
+| $aab$    | $a$,$aa$                       | $b$,$ab$                      | 0    |
+| $aaba$   | $a$,$aa$,$aab$                 | $a$,$ba$,$aba$                | 1    |
+| $aabaa$  | $a$,$aa$,$aab$,$aaba$          | $a$,$aa$,$baa$,$abaa$         | 2    |
+| $aabaaf$ | $a$,$aa$,$aab$,$aaba$,$aabaaf$ | $f$,$af$,$aaf$,$baaf$,$abaaf$ | 0    |
+
+对应就是
+
+| a    | a    | b    | a    | a    |
+| ---- | ---- | ---- | ---- | ---- |
+| 0    | 1    | 0    | 1    | 2    |
 
 ## 双指针法
 
