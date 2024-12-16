@@ -110,7 +110,19 @@ chore(progress): 更新[模块名称]进度 [题目编号][题目名称] -> [进
 
 ## 双指针法
 
+略
+
 ## 栈与队列
+
+| 题目名称                                                     | 相关标签                                                     | 平台     | 难度 | 进度 |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | -------- | ---- | ---- |
+| [232. 用栈实现队列](https://leetcode.cn/problems/implement-queue-using-stacks/description/) | `栈`，`设计`，`队列`                                         | leetcode | 简单 | ✅    |
+| [225. 用队列实现栈](https://leetcode.cn/problems/implement-stack-using-queues/description/) | `栈`，`设计`，`队列`                                         | leetcode | 简单 | ✅    |
+| [20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/) | `栈`，`字符串`                                               | leetcode | 简单 | ✅    |
+| [1047. 删除字符串中的所有相邻重复项](https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/description/) | `栈`，`字符串`                                               | leetcode | 简单 | ✅    |
+| [150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/description/) | `栈`，`数组`，`数学`                                         | leetcode | 中等 | ✅    |
+| [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/) | `队列`，`数组`，`滑动窗口`，`单调队列`，`堆(优先队列)`       | leetcode | 困难 | ⏳    |
+| [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/description/) | `数组`，`哈希表`，`分治`，`桶排序`，`计数`，`快速选择`，`排序`，`堆(优先队列)` | leetcode | 中等 | ⏳    |
 
 ## 二叉树
 
