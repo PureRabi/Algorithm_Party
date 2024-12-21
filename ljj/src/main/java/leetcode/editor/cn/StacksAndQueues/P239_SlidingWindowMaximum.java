@@ -13,20 +13,23 @@ public class P239_SlidingWindowMaximum {
 
     public static void main(String[] args) {
         Solution solution = new P239_SlidingWindowMaximum().new Solution();
+
         System.out.println(Arrays.toString(solution.maxSlidingWindow(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3)));
+
+        System.out.println(Arrays.toString(solution.maxSlidingWindow(new int[]{1}, 1)));
     }
 
     /**
      * deque.isEmpty()    // 判断队列是否为空
-     *
+     * <p>
      * deque.peek()       // 获取队首元素
      * deque.peekFirst()  // 同peek()，获取队首元素
      * deque.peekLast()   // 获取队尾元素
-     *
+     * <p>
      * deque.poll()       // 移除并返回队首元素
      * deque.pollFirst()  // 同poll()，移除并返回队首元素
      * deque.pollLast()   // 移除并返回队尾元素
-     *
+     * <p>
      * deque.offer(e)     // 在队尾插入元素
      * deque.offerFirst(e)// 在队首插入元素
      * deque.offerLast(e) // 在队尾插入元素
