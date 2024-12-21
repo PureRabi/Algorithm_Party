@@ -25,10 +25,10 @@ docs([题目编号][题目名称]): 添加题目解析与解题思路
 3. 提交进度更新
 
 ```
-chore(progress): 更新[模块名称]进度 [题目编号][题目名称] -> [进度状态]
+chore(progress): [题目编号][题目名称] -> [进度状态]
 ```
 
-举例：chore(progress): 更新数组模块进度 [704. 二分查找] -> ✅
+举例：chore(progress): [704. 二分查找] -> ✅
 
 ## My algorithm question details
 
@@ -102,11 +102,13 @@ chore(progress): 更新[模块名称]进度 [题目编号][题目名称] -> [进
 | $aabaa$  | $a$,$aa$,$aab$,$aaba$          | $a$,$aa$,$baa$,$abaa$         | 2    |
 | $aabaaf$ | $a$,$aa$,$aab$,$aaba$,$aabaaf$ | $f$,$af$,$aaf$,$baaf$,$abaaf$ | 0    |
 
-对应就是
+对应就是：
 
 | a    | a    | b    | a    | a    |
 | ---- | ---- | ---- | ---- | ---- |
 | 0    | 1    | 0    | 1    | 2    |
+
+**待完善...**
 
 ## 双指针法
 
@@ -121,10 +123,146 @@ chore(progress): 更新[模块名称]进度 [题目编号][题目名称] -> [进
 | [20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/) | `栈`，`字符串`                                               | leetcode | 简单 | ✅    |
 | [1047. 删除字符串中的所有相邻重复项](https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/description/) | `栈`，`字符串`                                               | leetcode | 简单 | ✅    |
 | [150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/description/) | `栈`，`数组`，`数学`                                         | leetcode | 中等 | ✅    |
-| [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/) | `队列`，`数组`，`滑动窗口`，`单调队列`，`堆(优先队列)`       | leetcode | 困难 | ⏳    |
-| [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/description/) | `数组`，`哈希表`，`分治`，`桶排序`，`计数`，`快速选择`，`排序`，`堆(优先队列)` | leetcode | 中等 | ⏳    |
+| [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/) | `队列`，`数组`，`滑动窗口`，`单调队列`，`堆(优先队列)`       | leetcode | 困难 | ✅    |
+| [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/description/) | `数组`，`哈希表`，`分治`，`桶排序`，`计数`，`快速选择`，`排序`，`堆(优先队列)` | leetcode | 中等 | ✅    |
 
 ## 二叉树
+
+| 题目名称                                                     | 相关标签                             | 平台     | 难度 | 进度 |
+| ------------------------------------------------------------ | ------------------------------------ | -------- | ---- | ---- |
+| [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/) | `栈`，`树`，`深度优先搜索`，`二叉树` | leetcode | 简单 | ⏳    |
+| [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/description/) | `栈`，`树`，`深度优先搜索`，`二叉树` | leetcode | 简单 | ⏳    |
+| [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/description/) | `栈`，`树`，`深度优先搜索`，`二叉树` | leetcode | 简单 | ⏳    |
+
+常见二叉树类型：**满二叉树**、**完全二叉树**、**二叉搜索树**、**平衡二叉搜索树**。
+
+存储方式：
+
+- 链式存储
+- 线性存储
+
+遍历方式：
+
+- 深度优先遍历
+  - 前序遍历（递归法，迭代法）：中左右
+  - 中序遍历（递归法，迭代法）：左中右
+  - 后序遍历（递归法，迭代法）：左右中
+- 广度优先遍历
+  - 层次遍历（迭代法）
+
+### 二叉树定义
+
+TreeNode.java：
+
+```java
+class TreeNode<T> {
+    T val;
+    TreeNode<T> left;
+    TreeNode<T> right;
+
+    TreeNode() {}
+
+    TreeNode(T val) {
+        this.val = val;
+    }
+
+    TreeNode(T val, TreeNode<T> left, TreeNode<T> right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+```
+
+#### 前序遍历
+
+```java
+// 前序遍历: 根 -> 左 -> 右
+public List<T> preorderTraversal(TreeNode<T> root) {
+    List<T> result = new ArrayList<>();
+    preorder(root, result);
+    return result;
+}
+private void preorder(TreeNode<T> root, List<T> result) {
+    if (root == null) {
+        return;
+    }
+    result.add(root.val);        // 访问根节点
+    preorder(root.left, result); // 遍历左子树
+    preorder(root.right, result);// 遍历右子树
+}
+```
+
+#### 中序遍历
+
+```java
+// 中序遍历: 左 -> 根 -> 右
+public List<T> inorderTraversal(TreeNode<T> root) {
+    List<T> result = new ArrayList<>();
+    inorder(root, result);
+    return result;
+}
+private void inorder(TreeNode<T> root, List<T> result) {
+    if (root == null) {
+        return;
+    }
+    inorder(root.left, result);  // 遍历左子树
+    result.add(root.val);        // 访问根节点
+    inorder(root.right, result); // 遍历右子树
+}
+```
+
+#### 后序遍历
+
+```java
+// 后序遍历: 左 -> 右 -> 根
+public List<T> postorderTraversal(TreeNode<T> root) {
+    List<T> result = new ArrayList<>();
+    postorder(root, result);
+    return result;
+}
+private void postorder(TreeNode<T> root, List<T> result) {
+    if (root == null) {
+        return;
+    }
+    postorder(root.left, result);  // 遍历左子树
+    postorder(root.right, result); // 遍历右子树
+    result.add(root.val);          // 访问根节点
+}
+```
+
+验证：
+
+```java
+//       1
+//      / \
+//     2   3
+//    / \
+//   4   5
+TreeNode<Integer> root = new TreeNode<>(1);
+root.left = new TreeNode<>(2);
+root.right = new TreeNode<>(3);
+root.left.left = new TreeNode<>(4);
+root.left.right = new TreeNode<>(5);
+
+// 创建遍历器实例
+TreeTraversal<Integer> traversal = new TreeTraversal<>();
+
+// 测试前序遍历 (预期结果: 1,2,4,5,3)
+System.out.println("前序遍历结果: " + traversal.preorderTraversal(root));
+
+// 测试中序遍历 (预期结果: 4,2,5,1,3)
+System.out.println("中序遍历结果: " + traversal.inorderTraversal(root));
+
+// 测试后序遍历 (预期结果: 4,5,2,3,1)
+System.out.println("后序遍历结果: " + traversal.postorderTraversal(root));
+```
+
+> 前序遍历结果: [1, 2, 4, 5, 3]
+> 中序遍历结果: [4, 2, 5, 1, 3]
+> 后序遍历结果: [4, 5, 2, 3, 1]
+
+
 
 ## 回溯算法
 
